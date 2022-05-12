@@ -78,6 +78,28 @@ body {
   width: 10vw;
 }
 
+/* ========= margin ========== */
+/* margin top */
+.breed-mt-1 {
+  margin-top: 0.1rem;
+}
+
+.breed-mt-2 {
+  margin-top: 0.4rem;
+}
+
+.breed-mt-4 {
+  margin-top: 0.8rem;
+}
+
+.breed-mt-5 {
+  margin-top: 1rem;
+}
+
+.breed-mt-6 {
+  margin-top: 1.2rem;
+}
+
 .header {
   background: rgb(50, 125, 245);
   color: white;
