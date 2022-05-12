@@ -1,13 +1,242 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/*=========== Breed colors ============ */
+
+/* blacks */
+.breed-black {
+  color: #000000;
+}
+
+/* gray */
+
+.breed-gray-900 {
+  color: #121224;
+}
+
+.breed-gray-800 {
+  color: #1a1a30;
+}
+
+.breed-gray-700 {
+  color: #27273e;
+}
+
+.breed-gray-600 {
+  color: #2f2f41;
+}
+
+.breed-gray-500 {
+  color: #3e4151;
+}
+
+.breed-gray-400 {
+  color: #484b5f;
+}
+
+.breed-gray-200 {
+  color: #56596f;
+}
+
+.breed-gray-100 {
+  color: #6c6e82;
+}
+
+/* ====== width ======= */
+.breed-w-6\/12 {
+  width: 50vw;
+}
+
+.breed-w-5\/12 {
+  width: 45vw;
+}
+
+.breed-w-4\/12 {
+  width: 40vw;
+}
+
+.breed-w-3\/12 {
+  width: 30vw;
+}
+
+.breed-w-2\/12 {
+  width: 20vw;
+}
+
+.breed-w-1\/12 {
+  width: 10vw;
+}
+
+.header {
+  background: rgb(50, 125, 245);
+  color: white;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.logo {
+  float: left;
+  padding: 0.4rem 2rem;
+  margin-left: 1rem;
+}
+
+.header ul {
+  position: absolute;
+
+  padding: 0;
+  margin: 0;
+  overflow: scroll;
+}
+
+#check {
+  display: none;
+}
+
+.header ul li {
+  list-style: none;
+  padding: 1.5rem 1rem;
+  background: rgb(75, 139, 241);
+  margin-bottom: 0.5rem;
+}
+
+.menu-icon {
+  padding: 16px 16px;
+  position: relative;
+  top: 0.7rem;
+  left: 1.2rem;
+  float: left;
+  background: rgb(98, 153, 242);
+  border-radius: 0.2rem;
+}
+
+.menu-icon .nav-icon {
+  display: block;
+  height: 4px;
+  width: 20px;
+  background: white;
+  position: absolute;
+  right: 0.4rem;
+  bottom: 0.9rem;
+  /* top: 2.2rem;
+  margin-left: 2.8rem; */
+}
+
+.menu-icon .nav-icon::before {
+  display: block;
+  content: "";
+  height: 4px;
+  width: 20px;
+  background: white;
+  top: 6px;
+  position: absolute;
+}
+
+.menu-icon .nav-icon::after {
+  display: block;
+  content: "";
+  height: 4px;
+  width: 20px;
+  background: white;
+  top: -6px;
+  position: absolute;
+}
+
+.menu {
+  clear: both;
+  background: rgb(50, 120, 234);
+  float: right;
+  top: 3.1rem;
+  left: -999px;
+  width: 80vw;
+  transition: all ease 0.8s;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+#check:checked ~ .menu {
+  clear: both;
+  background: rgb(50, 120, 234);
+  float: right;
+  top: 5.2rem;
+  left: 0;
+  height: 100vh;
+  width: 80vw;
+}
+
+.main {
+  margin-top: 5rem;
+  width: 100%;
+  padding: 0.2rem;
+  min-height: 100vh;
+  overflow-y: scroll;
+}
+
+@media (min-width: 1080px) {
+  .header ul li {
+    list-style: none;
+    padding: 0.8rem;
+    background: rgb(75, 139, 241);
+    margin-bottom: 0.5rem;
+  }
+
+  .menu-icon {
+    padding: 16px 16px;
+    position: relative;
+    top: 0.7rem;
+    left: 3.2rem;
+    float: left;
+    background: rgb(98, 153, 242);
+    border-radius: 0.2rem;
+  }
+
+  .logo {
+    float: left;
+    padding: 0.4rem 2rem;
+    margin-left: 4rem;
+  }
+  .menu {
+    clear: both;
+    background: rgb(50, 120, 234);
+    float: right;
+    top: 5.1rem;
+    left: 0px;
+    width: 14vw;
+    transition: all ease 0.8s;
+    height: 100vh;
+    overflow-y: scroll;
+  }
+
+  #check:checked ~ .menu {
+    clear: both;
+    background: rgb(50, 120, 234);
+    float: right;
+    top: 5.2rem;
+    left: -999px;
+    height: 100vh;
+    width: 40vw;
+  }
+
+  .main {
+    margin-top: 10vh;
+    width: 82vw;
+    padding-left: 4rem;
+    padding-top: 2rem;
+    float: right;
+    min-height: 100vh;
+    border: 1px solid orange;
+  }
 }
